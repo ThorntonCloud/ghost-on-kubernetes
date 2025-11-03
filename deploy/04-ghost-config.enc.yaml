@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: ghost-config-prod
+    namespace: ghost-on-kubernetes
+    labels:
+        app: ghost-on-kubernetes
+        app.kubernetes.io/name: ghost-config-prod
+        app.kubernetes.io/instance: ghost-on-kubernetes
+        app.kubernetes.io/version: "5.92"
+        app.kubernetes.io/component: ghost-config
+        app.kubernetes.io/part-of: ghost-on-kubernetes
+type: Opaque
+stringData:
+    config.production.json: ENC[AES256_GCM,data:L6aeXD2TeDV87QCO+U/TVsy9grXrX9yJycGJcXkTiHGi9I/QUDrmFZU7avtL2e7gcIrsCZ3kCttlPsb4x1O3LFOrxov4lDKcMCx0PFn8bkXtrs38MYshRY56JMpxz9+ncvOkXPrHgfMGS6cRUbaVL4vt7x7EE0DufvmkqhO4bbuAQ6rWV1v/NW+KAS4rxgWz49njgiHTRwkk4d9hP0lilwFDMqLJUEeU0BzlrM8MY5UXTFITsiTxum2GKj0NkXoPJE78fYjSuiLkSkWU7ZZPs/2QAY7sF3tBC6eAdHd08wgTA6R5ln4e+yNKv1T3WkA9VYBpFl/XuhyLB0qmWKXZZMudIt6yJ/LziLiTGy2Gddu7fR+MP1qeEquhPxsBS9uxR35Hnol13oBKaUaOajh3yHyqGF/Nx9yDcIPggrJZk21YeNx3W2TF8xsARB8Jk92L90E+kP/PgJsmgLoCu2p4vNlZeXfPh192qMjaEGVsPGhiQEZsy8Q2fVhLhfYs82P5dwokNi3ZXRS+MrHzT6mFX2VbK8bd5K40QkRV7kiakekzPpKTk2lG5g+xxQrgz6zPzQLqSb7J3Pci1emvGFfGjovqNAOyI+3vtCUA7c1bs0Vx4fWA/nsuTJtCjIRoWdn4asKznUC5Z7AvEo4j+/2BLZI/kshanveZXAY6Fy+PZn1OA2WR8FfUByLeGPfb0HZFo/xzZpgDGt1NB69bKnw6guyCuMvaGoJ5aUe4Q0K8C0EBq52aEo9XVgmTz5/tpDszbx3yfLuz82cksV35bA9GjtoAyvI/MnmDhRMHfI1KdIaXFhIPRp2WVY3Drs9WuUgb4kFaxoI4oHNXuddUrVNB42dEwR6U0bsWKYz+vO+7dlAwxf23Wzz/RMud7xzXb2teEa3fX/3YLoaV2fXJhcPiqMABNt5rB/dkyajIKAZPeK42VMWk+yQkLk9B0g/04WF5gpeqDOWP0ci/8AX5R0ZBbrkogyd3VNWLoWw1o4ZipmZYMpLQW8ZZK3lSUr4apS2ppuYOotwNu3U/w7fhTtxGkZmOWM0FdpV8Xu7DqBBKpO84xPN62o/mIUdFc/SdkKzjLVS0OBZXPSgXuExOhwha32gyGoAPMWEklTK6BxRXm7ki8omb0WwzJJU8YzQ+hraxZwyPGbqf8CpRf3TixXTl0KfHGIKHYYyQnQ==,iv:am5B4q6hwNVcgB+WsYp0hhR8kH5P/5FfDwJ+LnsoXVY=,tag:ZV8aSNYWy1ZuGxEDu/XmeA==,type:str]
+sops:
+    age:
+        - recipient: age193xe078xg59flywzx9wrjlnsd06f5akn3mn6uhma8nrea62hdqkqs5eesu
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBJN2o5UVhoNXYvcTVHaGpv
+            bGRneWp3QWJPVHVVQ1M3L2pkYzVQdHhlSGo0CjFJbmQzWHhmTHZkM0hJTE0xWWll
+            eGs0UkRxMDRTUUZtM1V0NkVibkorV00KLS0tIFEyc0pEenhvQ09JMnFlVHYvelI2
+            OFh1WUxUanRaMDJINzA1V1JPSzdlUUUKnMERHTLBLc+nEA4f/THkaslkbnPhwKS3
+            0HpSb2Qqb7VJt+KvKLWlSrXpW4tTtq7YhpV0/L0YmV2EEmniMTvS1Q==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-11-03T19:22:02Z"
+    mac: ENC[AES256_GCM,data:Rwu9/VHOr+llv3B9UeZrcETUss6CdO6ZNc8mvnRYEH564sNc9uHU/BQLHRTdnv/pi/U2TLfFUZF/sNrxoGAmktM5THIG6z0g7DBjbRyHSGMAiBHQ3BY8TZf+5gMiOX0G3qu/JKOc/UYJgm3hrZX4eRSPGZ3NAhaXovxZKtXJDGM=,iv:jnAvP2fVSH2z/s91fmB2r7dk/IH8HT+uGZLMKg+8lFg=,tag:L6Z12zPnq+S5cmnxyocJDg==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.11.0

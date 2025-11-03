@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+generators:
+  - deploy/01-mysql-config.enc.yaml
+  - deploy/04-ghost-config.enc.yaml
+  - deploy/10-tunnel-secret.enc.yaml
+
+resources:
+  - deploy/00-namespace.yaml
+  - deploy/02-pvc.yaml
+  - deploy/03-service.yaml
+  - deploy/05-mysql.yaml
+  - deploy/06-ghost-deployment.yaml
+  - deploy/07-httproute.yaml
+  - deploy/08-ghost-referencegrant.yaml
+  - deploy/09-tunnel-namespace.yaml
+  - deploy/11-tunnel-deploy.yaml

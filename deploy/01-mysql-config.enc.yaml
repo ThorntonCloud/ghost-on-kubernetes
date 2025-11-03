@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: ghost-on-kubernetes-mysql-env
+    namespace: ghost-on-kubernetes
+    labels:
+        app: ghost-on-kubernetes-mysql
+        app.kubernetes.io/name: ghost-on-kubernetes-mysql-env
+        app.kubernetes.io/instance: ghost-on-kubernetes
+        app.kubernetes.io/version: "5.92"
+        app.kubernetes.io/component: database-secret
+        app.kubernetes.io/part-of: ghost-on-kubernetes
+type: Opaque
+stringData:
+    #ENC[AES256_GCM,data:sGR6VIHRxjb/a+m4++g/MOa8zqxEkuTVVyJ9XVHYPtJddw==,iv:UstqN8uKMeILCjnBuHi7ndRGtvbLOUNaYDxh5iu0l3A=,tag:dhbI0Bq7GwwywqobuIqe6Q==,type:comment]
+    MYSQL_DATABASE: ENC[AES256_GCM,data:zIbeeUPPsFQ=,iv:BRTOoartDZZoanZm80igyyOOgtELLErLswBEFU1dPjU=,tag:oLzHueNBuVjtNWsUi9gP0g==,type:str]
+    #ENC[AES256_GCM,data:a0UYoS9HyvJNF8YoxyYyFHNVOpwBxZNEXaAEY1UZdvK/jw==,iv:Wiqxi+o/+MUbA92Fm+I9gSe4Hy7B03wUV+hy+Qjb8HA=,tag:/v9IAjcudXmZq36UbU1YJw==,type:comment]
+    MYSQL_USER: ENC[AES256_GCM,data:sY6kZni50I2eXsdd,iv:KVi65jG5noSatmbRcYJp+CdxJNDAe+naUSTuerXfPyc=,tag:uWDRqJaLkm6CAXpT651JWw==,type:str]
+    #ENC[AES256_GCM,data:z2htppJbbkWkjTG4BOjHgmA11VBhHE6H3Kmd03+C+ImOlQ==,iv:iEekmq+QRas23iGMQ7pV62NLJ78v9rWTxK0VL+1JlC8=,tag:q6iZPC9SMvpgPCfO+M5suw==,type:comment]
+    MYSQL_PASSWORD: ENC[AES256_GCM,data:2bPTiOQLc8lUFmN4l82Qjw==,iv:QV/oLfZxhNI/C1sPJ0TOr+mRzvhDcjV1BRkHgu4s1cw=,tag:HFG8rfKhyyCrNl7iFOBGaA==,type:str]
+    #ENC[AES256_GCM,data:80HtySC3pVShFhfNsNNWXOV6ZR7UEIbxCd94FtONsHVjoA==,iv:9hHeG9wMfRFLqy8OyT3TCSXiiTG733sV1bfKVFA86fA=,tag:J9bF+7/Q2dqWM6RBNGTwiQ==,type:comment]
+    MYSQL_ROOT_PASSWORD: ENC[AES256_GCM,data:/4TMYjX42ZV3CTbhvqbjWb/n8pcBZxt8,iv:1Vg2HBAdA1Z2do33veY64e5p3hlHMFv09QygfF/s06w=,tag:f39hNRtgkoOnMY3SUbVmTw==,type:str]
+    #ENC[AES256_GCM,data:1AyKHBd1zgEZrXbRKxC0HC+iiXQPwpcsEYQIT1W4vh5bYQ==,iv:MwGKTVHf+bC6+VEanzgrUIFHftSqLq8qZDJCzOcJYuU=,tag:xz6RuhN1o23ki2KtcwtPjQ==,type:comment]
+    MYSQL_HOST: ENC[AES256_GCM,data:pA==,iv:dl1dxhibqNnHviaWn1rq1jK6SjfjpiYIZRxDWKtRScU=,tag:7OOaXNiA4MFhYKPVLUJgJQ==,type:str]
+sops:
+    age:
+        - recipient: age193xe078xg59flywzx9wrjlnsd06f5akn3mn6uhma8nrea62hdqkqs5eesu
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBFL1BrYlgzWFpSNlUwVkJN
+            amJncDdXOE01L3dsYllkY2tZbFZtWHRmSnpJClQveWZTb2VsRktkNE1wYWJqS2ZV
+            SnZ4R1lKOHZYekZNODV2Si9ZRVl6T2sKLS0tIG4xVWxTOW5DWDNrT1pLeDM4eU13
+            aUpYbWk0WG81bG94WHdjdytCK21tOU0Kpfpg+OOg4+sLE9hRqJfvmljJoVqkpzL4
+            wHe8ktKGD0xkCY9kXohJuFgaKDGzMgCvz3fQzZs0uuPnxDgmFPt4Jw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-11-03T19:21:16Z"
+    mac: ENC[AES256_GCM,data:MaqBd62cHu6b83miIjA8cO7u7NR87gxobmg45VyiSIkoyGGiszcbPIVC4c9mffc4WkZbBl1/s6KPNLllB+fYbQ2d2D5u11BlYKbequGr73S7SNJH6j7Qf906uDEj4avy9JIUqCCPFBWyT+UhyTDHnJeg9TunlJMExqJdKvvBkNI=,iv:ebScdf0Pqvke+Fg1i4ZPcT6wiaY/tHEk7R0O6sp8N44=,tag:HR9l5RFf6PVD73qGSzAOFA==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.11.0
