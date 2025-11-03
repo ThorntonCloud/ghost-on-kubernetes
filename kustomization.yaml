@@ -12,7 +12,7 @@ resources:
   - deploy/03-service.yaml
   - deploy/05-mysql.yaml
   - deploy/06-ghost-deployment.yaml
-  - deploy/07-httproute.yaml
+  - deploy/07-ghost-httproute.yaml
   - deploy/08-ghost-referencegrant.yaml
   - deploy/09-tunnel-namespace.yaml
   - deploy/11-tunnel-deploy.yaml
