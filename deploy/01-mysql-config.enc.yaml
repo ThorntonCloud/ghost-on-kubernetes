@@ -1,39 +1,25 @@
-apiVersion: v1
-kind: Secret
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
 metadata:
-    name: ghost-on-kubernetes-mysql-env
-    namespace: ghost-on-kubernetes
-    labels:
+  name: ghost-on-kubernetes-mysql-env
+  namespace: ghost-on-kubernetes
+spec:
+  encryptedData:
+    MYSQL_DATABASE: AgDKR7KLSJE8r25EnRL669HEsHwgQ2+u00cPqyBersbjFcgBucy9LJP/rRSl2mKmYiB3VdxKwMnmAjLzhc+KyfsPNk5O0z2RYCp3msCCyhqwZMtZGqI/tCn5ycRQtLkNwReKuW/6kkQnBuueOGUIfcZAJkIlUqmCQXN8HouJ6D7FjpwsAXsUXedGUSKQDwOpLrrI0zAaITkWoiiYfQZrKpZIbmJO5l8qWHg9/9KbQZbhYv+W9P0uLWoozIhbRNiwo29ogFsR68+vWGNjOfICtCcoVgMOblQz+qLpM99+wJGmZVcoJZUgeq5dk3TnS8jjg83sJcco9tliK8dVepMoukH6cz+RcTOdKF1C0kLeL6F6Wl+I9i7Mm6imtdGJf8MMSam7+S5TcfJLVL4AjO3KMhSDQhuOmC47JcZvC4vFXb7Tkab2BWPWeX2so955kTqDX30kANEvKC/jiXC1pWEcZype3YuiDbXrBwxYDzMycY/5KdlF0UrsHvQcUh3uct1y+Irpp8O7kgq0SI11aOdkH8MR4D8+AphSi9GsCKSiWzKZgCUfRNkP1sZCbf4zcdea4xr5JjOxhmP0GbgYAqCRQdzupSSMvtPNTt/lGQlgQ2y1j+LhQ3myh6/A4H3MRmpHh8Kny5IRJKIUoflTawAHgzMdQlak8eC2xib3DmPneS/07GPmtW5QRwlcgwXf5jpe4D4Tjp4zxrbgiA==
+    MYSQL_HOST: AgCewz40TsU2q8C4UcyWrz/UeC6JaghzYA7fG5zreEq9XqD33otkUswsjoaw7XnEqGC9St1Dgp+03BYvO/Ph3FZtDPJCP1H6BYoLMumt/a5tbcbaaO+8dsJ1j/9Z6ekAKj/M7GiIQHaqZ2ePofKo86vR5WGDScisilaTKU/BaqRv7tMiaH6fs9ZEsQqQzl5qiLoVu45Z5x8v/3tkX38fIJjiGKbydaHlcbGVps4brFKcjr2t5vT8221YfFdUgDMsSeR53lA5/q/XAwZBgXapyAh5Yn8I9tXFR22eSFzCEgi7uFS8gLoTAUxd16wQdSjyEFVfGKERoGicj70/k2qU8A4WRVjXK5Fou9MlP55803/N2geLyvwFKOZ8kW7Mj0d3eWed6nE9cPvM2IgMj0VJ+3tmJ76mkku8Q9osvkEiXpAYZZrAGr1ma0BJF1MIIEFLFVxG1eexczShQji3WHQW101SE/68yb1YoCpREwwvTZM38RTWLEOje3TndqQDMhT0zEQJPrc3tHv1WpEK3u1DJh7iV/45rnTqm5lqpMNfkO2oQ/PebaqYTAODi2VBgdjWWaIb9GvCIVJ2ClnByJ4QSZqkKDY9FqX/8syPtOIs3YiHuvff0itOoPj/EnZ7siULvCZDVsEDTtNPnCEwDRJd9ZHc2RrVaJwmFleOrc8vjymhT4Dnrof8S0c3DDxX8XFGyo7p
+    MYSQL_PASSWORD: AgAmyZmdhcaA+jmcULqdOp/ZLVRH+Ef4u781GJY//4KvTPf2kUhgpK7x22xaqyOxgOqkz834uPwknoN/guZvjZMqNKUQJid5jSRY5MiJPTbi7lsnnan/XrW6ervXiBfbIeBGUDdnELC4UfncmIbW01uayspHNGqzJZS1SeV3mfhwkc8DXjof0OzVrUNiCbGRB23MjiT2Ox7m4ywWcuyKc1ze6FChJui8pAEkIH1WV7AY+ZuJacaNPvDQAPrOtCT4f95QD2ms1AkKRI7ZxPypR3Z8guqWpdQzFqEYJjuofRbbeD8w1elAkDtio8Z9VQQ7vFADHxDZGetKTpGlDHiLZV41r9x/ZmKYTKLy+0jvi6p+p9Ck4Q6Gi5rabA2knkrRne87WW31dj3B6HcNdZOFACp+kC++JyPfmK/OkTVIHoc2voVWp5ERWzoXidIS72NQaBC2AF1LKn5ak9B9ag8F11wiEnyXwS+b8UiVJbGqZcr2dkctA7sqOirX6aIx3JigZKPAE3fZ34+n2dXyBrvmAh+GKYhXAFwRNgHDA9sWKhedS9x6e3KW5kkfR2P8enAQX9O4meGZLaIL3/1NY5tbcKlbljq4EtNgY7t6TqC2z7LUf0WKk5jHAt597fFqKswPL+OOfe2GfbUDgcwUnObfSF80OtwfiaOjD+wOg8as4opEqx9bC8q/qEwtos9ynGt7tyAeVBbMr2HCc8YCRJncfKOR
+    MYSQL_ROOT_PASSWORD: AgBHC7wOTUq+B9K2OsIOPEomaTVQUv08IfqVy8K+BfVYxrFCWmy28dWENDwweH7WY765ls2YkspMA9ZQ2DcbWghdeXChP0pHYOKtfXto8HUGVzeL8taUvXWi6Z6G/YMq7XUzcqX4JY2GwYG9v86BrIpl87ilf7pGQb/r6kShktO0mAs7lnkNveu48eJx/kDIEGWrCW4gwvHNmAPvyuaH6C8AGMbrdAIKR6mxZZnWNOTrkWIrbmMuMbnqHElTvzm+Iw872A1yq/6Fg2AaOVtzzV9tteZu1ajzdj0uuqvU8lyUt/RRjosMT+mvs9VUr455kv271jc55j1lIFyqwq0Bkz3vx6EsbaWNVf9jTbwZjjZNQKXQiBPhW1suw33xXYCAiEi+g1QyB/+10RyCG4e56SeSrEbJvPsHcGUC+jVkV9E1H5C9Ha5iN5M63hJwnHdfX/D03N/GIVvnsUOaUQ/z1TAKgIdYxCp7BHtdF6xlW0DOj9cL3D/52vpPP15+e1LFY8+k3vVqTI/1YtCleVLrxg6g/0+koSBHOR/0jw+8CfV9FNbcVXJYcFpdO7fh621QjtQ5roYwT23vJf9iQ7V14gk65DJmTAAGaUN2fLJB7Z5OBVX3K3j5MBzWNBxWP/qsSatW74JgXWJf7DGedWPgfGdgf75hqNvfIUS4AV/+GHo3I5tO3DTz7uYjjXgAxSPzHVhqS1oVmzEhepD/BPW8gI5zuc+eAqJw5gA=
+    MYSQL_USER: AgCTZR8oLYT0gzuMoeXg9khbbalfGzL+1kzbAhNP26CdvRdrloURLl6VLIW0FO21Gqerl0/YWEwXSXL94pSH3C5rDbvuXwO2EQnEK/PeYLweFfef74+z6zQgG/mN5SN68ZvXGwRL8LXpI7EyezyQTx6zpdbmQuhVB9hRNdUVFvg7BdeHd81CzFo4KMQ1SPvttoIO4oOXfULtkJujPhhR19wzh4UOXqzzTNvR/KAcgngu37xIwCWibsWzmayAePxuImLDpwcEjHgEpLv0U7B/qfGyZxirMo3+WNi9zEIf9134xT8MVpq9mpghRXe/BxEBQuwKYzk0ciT1SJcXQOyd86fODV+OJII9G5u5LA+ZRbAMT8JKKwLK1Tim3KJ1qvb4QYnEVRois8nti4QQw533hO9DVbLtepAqxrisZnwRos+A84eFK50lp24+VM6xDCh98PBmWeT/2oqEzoxMLdmbqbln/IBLaANbrBYF+mwt7fyxHk01rgNn+UX5dDSzsfwlwFQcWEVOBIm+AXVaI0Am5CuyeANe8UlZ3ARwgTCI5pevZWoB7NIbsRyqXeDEtwkxufoX9zO9H+NAMIAKz+oBycR31VN8Nmh29nLKzSSBclVZ4r/aD54ZlZd3tWb76NYXuBRUXOfKr64B5aW9cJwZ2YLYCL27DbJg3RIpRHICNvLLJSEjzYe2AcCBUfsW7o6kXft2pCygWY7FkIleMhc=
+  template:
+    metadata:
+      labels:
         app: ghost-on-kubernetes-mysql
-        app.kubernetes.io/name: ghost-on-kubernetes-mysql-env
-        app.kubernetes.io/instance: ghost-on-kubernetes
-        app.kubernetes.io/version: "5.92"
         app.kubernetes.io/component: database-secret
+        app.kubernetes.io/instance: ghost-on-kubernetes
+        app.kubernetes.io/name: ghost-on-kubernetes-mysql-env
         app.kubernetes.io/part-of: ghost-on-kubernetes
-type: Opaque
-stringData:
-    #ENC[AES256_GCM,data:sGR6VIHRxjb/a+m4++g/MOa8zqxEkuTVVyJ9XVHYPtJddw==,iv:UstqN8uKMeILCjnBuHi7ndRGtvbLOUNaYDxh5iu0l3A=,tag:dhbI0Bq7GwwywqobuIqe6Q==,type:comment]
-    MYSQL_DATABASE: ENC[AES256_GCM,data:zIbeeUPPsFQ=,iv:BRTOoartDZZoanZm80igyyOOgtELLErLswBEFU1dPjU=,tag:oLzHueNBuVjtNWsUi9gP0g==,type:str]
-    #ENC[AES256_GCM,data:a0UYoS9HyvJNF8YoxyYyFHNVOpwBxZNEXaAEY1UZdvK/jw==,iv:Wiqxi+o/+MUbA92Fm+I9gSe4Hy7B03wUV+hy+Qjb8HA=,tag:/v9IAjcudXmZq36UbU1YJw==,type:comment]
-    MYSQL_USER: ENC[AES256_GCM,data:sY6kZni50I2eXsdd,iv:KVi65jG5noSatmbRcYJp+CdxJNDAe+naUSTuerXfPyc=,tag:uWDRqJaLkm6CAXpT651JWw==,type:str]
-    #ENC[AES256_GCM,data:z2htppJbbkWkjTG4BOjHgmA11VBhHE6H3Kmd03+C+ImOlQ==,iv:iEekmq+QRas23iGMQ7pV62NLJ78v9rWTxK0VL+1JlC8=,tag:q6iZPC9SMvpgPCfO+M5suw==,type:comment]
-    MYSQL_PASSWORD: ENC[AES256_GCM,data:2bPTiOQLc8lUFmN4l82Qjw==,iv:QV/oLfZxhNI/C1sPJ0TOr+mRzvhDcjV1BRkHgu4s1cw=,tag:HFG8rfKhyyCrNl7iFOBGaA==,type:str]
-    #ENC[AES256_GCM,data:80HtySC3pVShFhfNsNNWXOV6ZR7UEIbxCd94FtONsHVjoA==,iv:9hHeG9wMfRFLqy8OyT3TCSXiiTG733sV1bfKVFA86fA=,tag:J9bF+7/Q2dqWM6RBNGTwiQ==,type:comment]
-    MYSQL_ROOT_PASSWORD: ENC[AES256_GCM,data:/4TMYjX42ZV3CTbhvqbjWb/n8pcBZxt8,iv:1Vg2HBAdA1Z2do33veY64e5p3hlHMFv09QygfF/s06w=,tag:f39hNRtgkoOnMY3SUbVmTw==,type:str]
-    #ENC[AES256_GCM,data:1AyKHBd1zgEZrXbRKxC0HC+iiXQPwpcsEYQIT1W4vh5bYQ==,iv:MwGKTVHf+bC6+VEanzgrUIFHftSqLq8qZDJCzOcJYuU=,tag:xz6RuhN1o23ki2KtcwtPjQ==,type:comment]
-    MYSQL_HOST: ENC[AES256_GCM,data:pA==,iv:dl1dxhibqNnHviaWn1rq1jK6SjfjpiYIZRxDWKtRScU=,tag:7OOaXNiA4MFhYKPVLUJgJQ==,type:str]
-sops:
-    age:
-        - recipient: age193xe078xg59flywzx9wrjlnsd06f5akn3mn6uhma8nrea62hdqkqs5eesu
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBFL1BrYlgzWFpSNlUwVkJN
-            amJncDdXOE01L3dsYllkY2tZbFZtWHRmSnpJClQveWZTb2VsRktkNE1wYWJqS2ZV
-            SnZ4R1lKOHZYekZNODV2Si9ZRVl6T2sKLS0tIG4xVWxTOW5DWDNrT1pLeDM4eU13
-            aUpYbWk0WG81bG94WHdjdytCK21tOU0Kpfpg+OOg4+sLE9hRqJfvmljJoVqkpzL4
-            wHe8ktKGD0xkCY9kXohJuFgaKDGzMgCvz3fQzZs0uuPnxDgmFPt4Jw==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-11-03T19:21:16Z"
-    mac: ENC[AES256_GCM,data:MaqBd62cHu6b83miIjA8cO7u7NR87gxobmg45VyiSIkoyGGiszcbPIVC4c9mffc4WkZbBl1/s6KPNLllB+fYbQ2d2D5u11BlYKbequGr73S7SNJH6j7Qf906uDEj4avy9JIUqCCPFBWyT+UhyTDHnJeg9TunlJMExqJdKvvBkNI=,iv:ebScdf0Pqvke+Fg1i4ZPcT6wiaY/tHEk7R0O6sp8N44=,tag:HR9l5RFf6PVD73qGSzAOFA==,type:str]
-    encrypted_regex: ^(data|stringData)$
-    version: 3.11.0
+        app.kubernetes.io/version: "5.92"
+      name: ghost-on-kubernetes-mysql-env
+      namespace: ghost-on-kubernetes
+    type: Opaque
